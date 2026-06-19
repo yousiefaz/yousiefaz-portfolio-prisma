@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
+
 import { Raleway } from "next/font/google";
+
 import "./globals.css";
+
 import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/components/theme-provider";
 import MobileNav from "@/components/navigation/mobile-nav";
@@ -56,7 +59,7 @@ export default function RootLayout({
       <body
         className={cn(
           "relative text-muted-foreground font-sans",
-          raleway.variable
+          raleway.variable,
         )}
       >
         <SpeedInsights />

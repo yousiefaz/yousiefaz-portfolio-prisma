@@ -48,8 +48,8 @@ const HomeSection = () => {
             showCursor={true}
             cursorCharacter="|"
             className="text-3xl md:text-4xl font-bold cursor-default"
-            textColors={["#f43f5e"]}
-            // textColors={["#e11d48"]}
+            textColors={["#f43f5e"]} //pink
+            //textColors={["#e11d48"]} //blue
             variableSpeed={{ min: 50, max: 120 }}
           />
         </h2>
@@ -76,7 +76,7 @@ const HomeSection = () => {
             href="#projects"
             className={cn(
               buttonVariants({ size: "lg" }),
-              "px-4 md:px-8 h-9 md:h-11"
+              "px-4 md:px-8 h-9 md:h-11",
             )}
           >
             <span>my work</span>
@@ -86,7 +86,7 @@ const HomeSection = () => {
             href="/yousiefaz-cv.pdf"
             className={cn(
               buttonVariants({ variant: "outline", size: "lg" }),
-              "px-4 md:px-8 h-9 md:h-11"
+              "px-4 md:px-8 h-9 md:h-11",
             )}
             target="_blank"
             download={true}

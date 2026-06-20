@@ -12,7 +12,7 @@ import {
 import { Separator } from "@/components/ui/separator";
 import { buttonVariants } from "@/components/ui/button";
 
-import Carousel from "@/components/projects/Carousel";
+import Carousel from "@/components/projects/Csarousel";
 import ProjectCard from "@/components/projects/ProjectCard";
 import InfoItem from "@/components/projects/InfoItem";
 

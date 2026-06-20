@@ -7,15 +7,15 @@ datasource db {
 }
 
 model Project {
-  id           String    @id @default(cuid())
+  id           String   @id @default(cuid())
   title        String
   description  String
   images       String[]
   tags         String[]
   demoLink     String?
   githubLink   String?
-  publishedAt  DateTime?
-  isResponsive Boolean   @default(true)
+  publishedAt  String?
+  isResponsive Boolean  @default(true)
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt

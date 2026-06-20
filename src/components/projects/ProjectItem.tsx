@@ -51,7 +51,7 @@ const ProjectItem: FC<ProjectItemProps> = ({ project }) => {
               <InfoItem icon={Calendar} label="published">
                 <p className="font-semibold">
                   {project.publishedAt
-                    ? new Date(project.publishedAt).toLocaleString()
+                    ? new Date(project.publishedAt).toLocaleDateString("en-US")
                     : "Not published"}
                 </p>
               </InfoItem>

@@ -37,7 +37,7 @@ async function main() {
         tags: ["Next.js", "React.js", "TypeScript", "HTML", "CSS", "Tailwind"],
         demoLink: "https://blueprint-lime.vercel.app/",
         githubLink: "https://github.com/yousiefaz/blueprint-frontend.git",
-        publishedAt: new Date(),
+        publishedAt: "2025-10-05",
         isResponsive: true,
       },
     ],

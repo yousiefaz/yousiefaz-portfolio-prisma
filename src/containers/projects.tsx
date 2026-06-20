@@ -1,7 +1,6 @@
 import ProjectItem from "@/components/projects/ProjectItem";
 import SectionTitle from "@/components/SectionTitle";
 import { Effect } from "@/components/ui/effects";
-
 import { prisma } from "@/lib/prisma";
 
 const ProjectsSection = async () => {

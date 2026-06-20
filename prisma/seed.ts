@@ -1,8 +1,8 @@
 import "dotenv/config";
 
+import { PrismaClient } from "@prisma/client";
 import { Pool } from "pg";
 import { PrismaPg } from "@prisma/adapter-pg";
-import { PrismaClient } from "@prisma/client";
 
 const pool = new Pool({
   connectionString: process.env.DATABASE_URL,
@@ -52,18 +52,14 @@ async function main() {
       { label: "Next.js", value: 70, category: "frontend" },
       { label: "TypeScript", value: 60, category: "frontend" },
       { label: "Tailwind CSS", value: 80, category: "frontend" },
-      { label: "Responsive Design", value: 80, category: "frontend" },
-      { label: "UI/UX Principles", value: 80, category: "frontend" },
 
       { label: "Node.js", value: 70, category: "backend" },
       { label: "REST APIs", value: 75, category: "backend" },
       { label: "Prisma ORM", value: 75, category: "backend" },
       { label: "PostgreSQL", value: 65, category: "backend" },
 
-      { label: "Adobe Ae", value: 70, category: "tools" },
       { label: "Adobe Illustrator", value: 80, category: "tools" },
       { label: "Adobe Photoshop", value: 60, category: "tools" },
-      { label: "Canva", value: 70, category: "tools" },
       { label: "Figma", value: 70, category: "tools" },
       { label: "Git & GitHub", value: 70, category: "tools" },
       { label: "OpenAI Tools", value: 80, category: "tools" },

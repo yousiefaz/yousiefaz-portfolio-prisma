@@ -2,16 +2,17 @@ import ProjectItem from "@/components/projects/ProjectItem";
 import SectionTitle from "@/components/SectionTitle";
 import { Effect } from "@/components/ui/effects";
 import { prisma } from "@/lib/prisma";
+import type { Project } from "@prisma/client";
 
 const ProjectsSection = async () => {
-  const projects = await prisma.project.findMany({
+  const projects: Project[] = await prisma.project.findMany({
     orderBy: { createdAt: "desc" },
   });
 
   return (
     <section id="projects" className="relative container space-y-6">
       <Effect
-        className="top-1/2 left-1/2 translate-x-[-50%] translate-y-[-50%] animate-float-3"
+        className="top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 animate-float-3"
         animateIn={false}
         opacity={0.5}
       />

@@ -3,7 +3,7 @@ import AboutSection from "@/containers/about";
 import ContactSection from "@/containers/contact";
 import ProjectsSection from "@/containers/projects";
 import SkillsSection from "@/containers/skills";
-import ScrollToTop from "@/components/scroll-to-top";
+import ScrollToTop from "@/components/ScrollToTop";
 import Footer from "@/components/navigation/footer";
 import Navbar from "@/components/navigation/navbar";
 

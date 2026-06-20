@@ -1,0 +1,38 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Project {
+  id           String    @id @default(cuid())
+  title        String
+  description  String
+  images       String[]
+  tags         String[]
+  demoLink     String?
+  githubLink   String?
+  publishedAt  DateTime?
+  isResponsive Boolean   @default(true)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Skill {
+  id       String        @id @default(cuid())
+  label    String
+  value    Int
+  category SkillCategory
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+enum SkillCategory {
+  frontend
+  backend
+  tools
+}

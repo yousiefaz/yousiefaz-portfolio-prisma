@@ -1,4 +1,4 @@
-import SectionTitle from "@/components/section-title";
+import SectionTitle from "@/components/SectionTitle";
 import { buttonVariants } from "@/components/ui/button";
 import { Effect } from "@/components/ui/effects";
 import { Mail } from "lucide-react";
@@ -13,7 +13,7 @@ const ContactSection = () => {
           size="default"
           opacity={0.4}
           animateIn={false}
-          className="-top-4 -end-4 animate-float-3"
+          className="-top-4 -inset-e-4 animate-float-3"
         />
         <SectionTitle
           title="get in touch"

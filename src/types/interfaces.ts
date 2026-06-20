@@ -17,7 +17,7 @@ export interface Statistics {
 export type SkillCategory = "frontend" | "backend" | "tools";
 
 export interface Skill {
-  _id: string;
+  id: string;
   label: string;
   value: number;
   category: SkillCategory;
@@ -29,27 +29,19 @@ export interface TabItem {
   label: string;
 }
 
-export interface SanityImage {
-  _type: "image";
-  asset: {
-    _ref: string;
-    _type: "reference";
-  };
-}
-
 export interface CarouselProps {
-  images: SanityImage[];
+  images: string[];
   className?: string;
 }
 
 export interface Project {
-  _id: string;
+  id: string;
   title: string;
   description: string;
-  images: SanityImage[];
+  images: string[];
   tags: string[];
-  demoLink: string;
-  githubLink: string;
-  publishedAt: Date;
+  demoLink: string | null;
+  githubLink: string | null;
+  publishedAt: Date | null;
   isResponsive: boolean;
 }

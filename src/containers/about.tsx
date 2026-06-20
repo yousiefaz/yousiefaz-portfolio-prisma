@@ -1,4 +1,4 @@
-import SectionTitle from "@/components/section-title";
+import SectionTitle from "@/components/SectionTitle";
 import { buttonVariants } from "@/components/ui/button";
 import { Effect } from "@/components/ui/effects";
 import { getStatistics } from "@/constants/statistics";
@@ -16,7 +16,7 @@ const AboutSection = async () => {
         animateIn={false}
         opacity={0.5}
       />
-      <article className="relative max-w-[50rem] mx-auto bg-background/90 border rounded-lg p-6 flex flex-col gap-y-4">
+      <article className="relative max-w-200 mx-auto bg-background/90 border rounded-lg p-6 flex flex-col gap-y-4">
         <Effect
           variant="square"
           size="default"
@@ -51,7 +51,7 @@ const AboutSection = async () => {
             href="#skills"
             className={cn(
               buttonVariants({ size: "lg" }),
-              "col-span-2 md:col-span-1"
+              "col-span-2 md:col-span-1",
             )}
           >
             <span>Discover skills</span>

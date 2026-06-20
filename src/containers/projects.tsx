@@ -1,11 +1,11 @@
 import ProjectItem from "@/components/projects/ProjectItem";
 import SectionTitle from "@/components/SectionTitle";
 import { Effect } from "@/components/ui/effects";
+
 import { prisma } from "@/lib/prisma";
-import type { Project } from "@prisma/client";
 
 const ProjectsSection = async () => {
-  const projects: Project[] = await prisma.project.findMany({
+  const projects = await prisma.project.findMany({
     orderBy: { createdAt: "desc" },
   });
 

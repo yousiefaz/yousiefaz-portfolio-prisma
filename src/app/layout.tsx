@@ -62,8 +62,6 @@ export default function RootLayout({
           raleway.variable,
         )}
       >
-        <SpeedInsights />
-        <Analytics />
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -73,6 +71,8 @@ export default function RootLayout({
           <MobileNav />
           <main>{children}</main>
         </ThemeProvider>
+        <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   );

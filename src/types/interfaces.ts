@@ -42,6 +42,6 @@ export interface Project {
   tags: string[];
   demoLink: string | null;
   githubLink: string | null;
-  publishedAt: Date | null;
+  publishedAt: string | null;
   isResponsive: boolean;
 }

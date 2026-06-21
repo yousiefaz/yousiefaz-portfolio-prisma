@@ -16,6 +16,7 @@ const Carousel: FC<CarouselProps> = ({ images }) => {
         alt="project image"
         className="w-full max-h-120 shadow"
       />
+
       <div className="grid grid-cols-4 gap-2">
         {images.map((image, index) => (
           <div key={index} className="w-full max-h-28 overflow-hidden">

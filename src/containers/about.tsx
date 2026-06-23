@@ -4,7 +4,6 @@ import { Effect } from "@/components/ui/effects";
 import { getStatistics } from "@/constants/statistics";
 import { cn } from "@/lib/utils";
 import { ArrowRightCircle } from "lucide-react";
-import React from "react";
 
 const AboutSection = async () => {
   const { statistics } = await getStatistics();

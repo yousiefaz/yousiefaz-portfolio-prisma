@@ -1,4 +1,3 @@
-import React from "react";
 import { ModeToggle } from "@/components/navigation/mode-toggle";
 import Logo from "@/components/navigation/logo";
 import { navLinks } from "@/constants/nav-links";

@@ -1,5 +1,4 @@
 import { navLinks } from "@/constants/nav-links";
-import React from "react";
 
 const MobileNav = () => {
   return (

@@ -1,6 +1,5 @@
 import { socialLinks } from "@/constants/social-links";
 import { cn } from "@/lib/utils";
-import React from "react";
 import { buttonVariants } from "@/components/ui/button";
 
 const Footer = () => {

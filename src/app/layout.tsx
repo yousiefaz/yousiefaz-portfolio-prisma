@@ -18,30 +18,81 @@ const raleway = Raleway({
 });
 
 export const metadata: Metadata = {
-  title: "Yousiefaz Portfolio",
-  description:
-    "Frontend Developer crafting efficient, user-focused web solutions with clean design and smart functionality.",
+  metadataBase: new URL("https://yousiefaz.online"),
 
-  icons: {
-    icon: "/icon.png",
-    shortcut: "/favicon.ico",
-    apple: "/apple-touch-icon.png",
+  title: {
+    default: "Youisefaz | Frontend Developer",
+    template: "%s | Youisefaz",
+  },
+
+  description:
+    "Frontend Developer (React, Next.js, TypeScript) building fast, scalable, and modern web applications.",
+
+  applicationName: "Youisefaz",
+
+  keywords: [
+    "Frontend Developer",
+    "React Developer",
+    "Next.js Developer",
+    "TypeScript",
+    "JavaScript",
+    "Frontend Engineer",
+    "UI Engineer",
+    "Web Developer Egypt",
+    "Portfolio",
+  ],
+
+  authors: [
+    {
+      name: "Yousief AboAlyazed (Youisefaz)",
+      url: "https://yousiefaz.online",
+    },
+  ],
+
+  creator: "YAZ",
+  publisher: "Youisefaz",
+
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
   },
 
   openGraph: {
-    title: "Yousiefaz Portfolio",
+    type: "website",
+    url: "https://yousiefaz.online",
+    siteName: "Youisefaz",
+    title: "Youisefaz | Frontend Developer",
     description:
-      "Frontend Developer crafting efficient, user-focused web solutions with clean design and smart functionality.",
-    url: "https://www.yousiefaz.online",
-    siteName: "Yousiefaz",
+      "Frontend Developer specializing in React, Next.js, and modern web performance.",
     images: [
       {
-        url: "/og-image.png",
+        url: "/og.png",
         width: 1200,
         height: 630,
-        alt: "Yousiefaz Portfolio Preview",
+        alt: "Youisefaz Portfolio Preview",
       },
     ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    creator: "@yaz",
+    title: "Youisefaz | Frontend Developer",
+    description:
+      "Frontend Developer specializing in React, Next.js, and modern web performance.",
+    images: ["/og.png"],
+  },
+
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
   },
 };
 
@@ -58,7 +109,7 @@ export default function RootLayout({
     >
       <body
         className={cn(
-          "relative text-muted-foreground font-sans",
+          "relative min-h-screen text-muted-foreground font-sans",
           raleway.variable,
         )}
       >
@@ -69,8 +120,9 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <MobileNav />
-          <main>{children}</main>
+          <main className="relative">{children}</main>
         </ThemeProvider>
+
         <SpeedInsights />
         <Analytics />
       </body>

@@ -8,69 +8,78 @@ import { ArrowRightCircle, Download } from "lucide-react";
 import Image from "next/image";
 import TypingText from "@/components/ui/shadcn-io/typing-text";
 
-import React from "react";
-
 const HomeSection = () => {
   return (
     <section
       id="home"
+      aria-label="Hero section"
       className="relative container grid md:grid-cols-12 items-center gap-6"
     >
-      {/* Social links */}
-      <ul className="flex md:flex-col gap-6 items-center size-fit mx-auto py-2 md:py-8 px-8 md:px-2 border rounded-3xl">
+      {/* SOCIAL LINKS */}
+      <ul
+        aria-label="Social links"
+        className="flex md:flex-col gap-6 items-center size-fit mx-auto py-2 md:py-8 px-8 md:px-2 border rounded-3xl"
+      >
         {socialLinks.map((link, index) => {
           const { href, icon: Icon } = link;
           return (
-            <li key={index} className="hover:text-primary">
-              <a href={href} target="_blank" rel="noreferrer noopener">
+            <li key={index} className="hover:text-primary transition-colors">
+              <a
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="social link"
+              >
                 <Icon className="size-5" />
               </a>
             </li>
           );
         })}
       </ul>
-      {/* Social links */}
 
-      {/* Presentation */}
+      {/* PRESENTATION */}
       <div className="md:col-span-6 flex flex-col items-center md:items-start gap-y-4 text-center md:text-left">
-        <h2 className="text-3xl md:text-4xl font-bold text-foreground capitalize">
-          hello, i&apos;m{" "}
+        {/* SEO-FRIENDLY HEADLINE */}
+        <h1 className="text-3xl md:text-4xl font-bold text-foreground capitalize">
+          hello, i&apos;m <span className="sr-only">Yousief AboAlyazed</span>
           <TypingText
             text={[
               "Yousief",
               "Frontend Developer",
-              "Graphic Designer",
-              "UI/UX Enthusiast",
+              "React Developer",
+              "UI Engineer",
               "Creative Thinker",
             ]}
-            typingSpeed={100}
-            pauseDuration={3000}
-            showCursor={true}
+            typingSpeed={90}
+            pauseDuration={2500}
+            showCursor
             cursorCharacter="|"
             className="text-3xl md:text-4xl font-bold cursor-default"
-            textColors={["#f43f5e"]} //pink
-            //textColors={["#e11d48"]} //blue
-            variableSpeed={{ min: 50, max: 120 }}
+            textColors={["#f43f5e"]}
+            variableSpeed={{ min: 60, max: 110 }}
           />
+        </h1>
+
+        {/* SUBTITLE (SEO IMPROVED) */}
+        <h2 className="text-xl md:text-2xl font-semibold capitalize text-muted-foreground">
+          Building fast, scalable & modern web experiences
         </h2>
 
-        <h5 className="text-xl text-center md:text-left md:text-xl font-semibold capitalize">
-          Passionate About User-Centered Design & Insight-Driven Solutions
-        </h5>
-
+        {/* DESCRIPTION */}
         <p className="leading-7 md:leading-8 md:text-lg md:max-w-[85%] text-center md:text-start">
-          I build experiences that don&apos;t just work — they speak. Every
-          pixel, every line of code, every detail reflects a story I&apos;m
-          still writing — mine.
+          I build modern frontend experiences using React, Next.js, and
+          TypeScript. Focused on performance, usability, and clean UI systems
+          that feel alive.
         </p>
 
         <p
-          className="text-sm md:text-base italic text-center md:text-start text-primary cursor-default"
+          className="text-sm md:text-base italic text-primary cursor-default"
           title="it's art do not touch it"
         >
-          &ldquo; Made with love &lt;3 &rdquo;
+          &ldquo;Made with love &lt;3&rdquo;
         </p>
 
+        {/* CTA */}
         <div className="flex items-center gap-2 py-4">
           <a
             href="#projects"
@@ -79,9 +88,10 @@ const HomeSection = () => {
               "px-4 md:px-8 h-9 md:h-11",
             )}
           >
-            <span>my work</span>
+            <span>View Work</span>
             <ArrowRightCircle className="size-4" />
           </a>
+
           <a
             href="/yousiefaz-cv.pdf"
             className={cn(
@@ -89,19 +99,20 @@ const HomeSection = () => {
               "px-4 md:px-8 h-9 md:h-11",
             )}
             target="_blank"
-            download={true}
+            rel="noopener noreferrer"
+            download
           >
-            <span>download CV</span>
+            <span>Download CV</span>
             <Download className="size-4" />
           </a>
         </div>
       </div>
-      {/* Presentation */}
 
-      {/* Image */}
+      {/* IMAGE SECTION */}
       <div className="md:col-span-5 grid place-content-center">
         <div className="relative flex items-center justify-center size-80 md:size-96">
           <Effect className="size-full" opacity={0.8} />
+
           <Effect
             variant="ball"
             size="sm"
@@ -111,7 +122,7 @@ const HomeSection = () => {
           <Effect
             variant="ball"
             size="sm"
-            className="top-[50%] left-[2%] -rotate-42 animate-float-2"
+            className="top-[50%] left-[2%] -rotate-45 animate-float-2"
             opacity={0.5}
           />
           <Effect
@@ -120,17 +131,19 @@ const HomeSection = () => {
             className="bottom-[4%] left-[25%] rotate-30 animate-float-3"
             opacity={0.9}
           />
+
           <Image
             src="/images/profile-pic.png"
-            alt="profile picture"
+            alt="Yousief AboAlyazed - Frontend Developer"
             width={500}
             height={500}
+            priority
+            fetchPriority="high"
             className="object-contain rounded-full border-2 size-[80%] ring-4 ring-primary ring-offset-4 ring-offset-background"
             title="AURA"
           />
         </div>
       </div>
-      {/* Image */}
     </section>
   );
 };

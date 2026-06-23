@@ -2,7 +2,6 @@ import SectionTitle from "@/components/SectionTitle";
 import { buttonVariants } from "@/components/ui/button";
 import { Effect } from "@/components/ui/effects";
 import { Mail } from "lucide-react";
-import React from "react";
 
 const ContactSection = () => {
   return (

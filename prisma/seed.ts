@@ -46,36 +46,43 @@ async function main() {
   await prisma.skill.createMany({
     data: [
       // ================= FRONTEND =================
-      { label: "React.js", value: 80, category: "frontend" },
-      { label: "Next.js", value: 80, category: "frontend" },
-      { label: "JavaScript", value: 80, category: "frontend" },
-      { label: "TypeScript", value: 70, category: "frontend" },
+      { label: "React.js", value: 85, category: "frontend" },
+      { label: "Next.js", value: 85, category: "frontend" },
+      { label: "JavaScript", value: 85, category: "frontend" },
+      { label: "TypeScript", value: 80, category: "frontend" },
       //
-      { label: "HTML5", value: 90, category: "frontend" },
-      { label: "CSS3", value: 90, category: "frontend" },
-      { label: "Tailwind CSS", value: 80, category: "frontend" },
+      { label: "Tailwind CSS", value: 85, category: "frontend" },
       { label: "Shadcn UI", value: 80, category: "frontend" },
       //
+      { label: "React Hook Form", value: 80, category: "frontend" },
+      { label: "Zod", value: 75, category: "frontend" },
+      { label: "TanStack Query", value: 75, category: "frontend" },
+      { label: "REST APIs Integration", value: 80, category: "frontend" },
+      //
+      { label: "App Router", value: 70, category: "frontend" },
       { label: "Responsive Design", value: 90, category: "frontend" },
       { label: "SEO Optimization", value: 70, category: "frontend" },
-      { label: "App Router", value: 70, category: "frontend" },
-      //
-      { label: "REST APIs Integration", value: 70, category: "frontend" },
-      { label: "TanStack Query", value: 70, category: "frontend" },
+      { label: "Performance Optimization", value: 70, category: "frontend" },
 
       // ================= BACKEND =================
-      { label: "Node.js", value: 70, category: "backend" },
+      { label: "Node.js", value: 65, category: "backend" },
       //
       {
         label: "Authentication & Authorization",
         value: 70,
         category: "backend",
       },
+      {
+        label: "Authentication & Authorization",
+        value: 70,
+        category: "backend",
+      },
       { label: "Auth.js", value: 70, category: "backend" },
-      { label: "Session-Based Authentication", value: 70, category: "backend" },
+      { label: "Session & JWT Authentication", value: 70, category: "backend" },
+      { label: "API Routes", value: 75, category: "backend" },
       //
       { label: "Prisma ORM", value: 70, category: "backend" },
-      { label: "PostgreSQL", value: 60, category: "backend" },
+      { label: "PostgreSQL", value: 65, category: "backend" },
       { label: "Neon Database", value: 70, category: "backend" },
 
       // ================= TOOLS =================

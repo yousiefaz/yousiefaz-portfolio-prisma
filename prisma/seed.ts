@@ -72,11 +72,6 @@ async function main() {
         value: 70,
         category: "backend",
       },
-      {
-        label: "Authentication & Authorization",
-        value: 70,
-        category: "backend",
-      },
       { label: "Auth.js", value: 70, category: "backend" },
       { label: "Session & JWT Authentication", value: 70, category: "backend" },
       { label: "API Routes", value: 75, category: "backend" },

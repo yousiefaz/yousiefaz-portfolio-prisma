@@ -17,8 +17,8 @@ const prisma = new PrismaClient({
 async function main() {
   console.log("🌱 Seeding database...");
 
-  await prisma.skill.deleteMany();
-  await prisma.project.deleteMany();
+  // await prisma.project.deleteMany();
+  // await prisma.skill.deleteMany();
 
   await prisma.project.createMany({
     data: [
